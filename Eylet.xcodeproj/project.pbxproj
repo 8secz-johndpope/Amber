@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5B4F8BEAAE764563A1FF0B /* Pods_Eylet_EyletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5CB2E496DB65A9E4A21C44 /* Pods_Eylet_EyletUITests.framework */; };
+		1CBACA9D40348535C815D9EF /* Pods_EyletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D29C4810DB4DE43268D2FC /* Pods_EyletTests.framework */; };
+		562FD319B2A7DF8C6B1BB4C8 /* Pods_Eylet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B51FDDF1FA28F562792F8A /* Pods_Eylet.framework */; };
 		76C6B64123EE199100AD279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64023EE199100AD279B /* AppDelegate.swift */; };
 		76C6B64323EE199100AD279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64223EE199100AD279B /* SceneDelegate.swift */; };
 		76C6B64523EE199100AD279B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64423EE199100AD279B /* ViewController.swift */; };
@@ -15,6 +18,11 @@
 		76C6B64D23EE199700AD279B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C6B64B23EE199700AD279B /* LaunchScreen.storyboard */; };
 		76C6B65823EE199700AD279B /* EyletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B65723EE199700AD279B /* EyletTests.swift */; };
 		76C6B66323EE199700AD279B /* EyletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B66223EE199700AD279B /* EyletUITests.swift */; };
+		76C6B67223EF389900AD279B /* SwipCardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B67123EF389900AD279B /* SwipCardsDataSource.swift */; };
+		76C6B67623EF38E000AD279B /* CardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B67523EF38E000AD279B /* CardsDataModel.swift */; };
+		76C6B67A23EF391400AD279B /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B67923EF391400AD279B /* SwipeCardView.swift */; };
+		76C6B67C23EF392500AD279B /* StackContainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B67B23EF392500AD279B /* StackContainterView.swift */; };
+		76D08E51240199B800529F93 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D08E50240199B800529F93 /* CommonFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B2E62F71284F891315EE42 /* Pods-Eylet-EyletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eylet-EyletUITests.release.xcconfig"; path = "Target Support Files/Pods-Eylet-EyletUITests/Pods-Eylet-EyletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		27D29C4810DB4DE43268D2FC /* Pods_EyletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B51FDDF1FA28F562792F8A /* Pods_Eylet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eylet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F859806D66F55269165AE0 /* Pods-Eylet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eylet.release.xcconfig"; path = "Target Support Files/Pods-Eylet/Pods-Eylet.release.xcconfig"; sourceTree = "<group>"; };
+		39C1CC4C9F25CD21A60C1C4A /* Pods-EyletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyletTests.debug.xcconfig"; path = "Target Support Files/Pods-EyletTests/Pods-EyletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		565477E794FD24518B285EC1 /* Pods-EyletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyletTests.release.xcconfig"; path = "Target Support Files/Pods-EyletTests/Pods-EyletTests.release.xcconfig"; sourceTree = "<group>"; };
 		76C6B63D23EE199100AD279B /* Eylet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eylet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C6B64023EE199100AD279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C6B64223EE199100AD279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,14 @@
 		76C6B65E23EE199700AD279B /* EyletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C6B66223EE199700AD279B /* EyletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyletUITests.swift; sourceTree = "<group>"; };
 		76C6B66423EE199700AD279B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C6B67123EF389900AD279B /* SwipCardsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipCardsDataSource.swift; sourceTree = "<group>"; };
+		76C6B67523EF38E000AD279B /* CardsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataModel.swift; sourceTree = "<group>"; };
+		76C6B67923EF391400AD279B /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		76C6B67B23EF392500AD279B /* StackContainterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainterView.swift; sourceTree = "<group>"; };
+		76D08E50240199B800529F93 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		991A49E4476EF36E6425D9C3 /* Pods-Eylet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eylet.debug.xcconfig"; path = "Target Support Files/Pods-Eylet/Pods-Eylet.debug.xcconfig"; sourceTree = "<group>"; };
+		A4C1E201CA8E5189E0F36247 /* Pods-Eylet-EyletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eylet-EyletUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eylet-EyletUITests/Pods-Eylet-EyletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC5CB2E496DB65A9E4A21C44 /* Pods_Eylet_EyletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eylet_EyletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562FD319B2A7DF8C6B1BB4C8 /* Pods_Eylet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBACA9D40348535C815D9EF /* Pods_EyletTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5B4F8BEAAE764563A1FF0B /* Pods_Eylet_EyletUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A503CD3A7875C3F673BF812 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				991A49E4476EF36E6425D9C3 /* Pods-Eylet.debug.xcconfig */,
+				36F859806D66F55269165AE0 /* Pods-Eylet.release.xcconfig */,
+				A4C1E201CA8E5189E0F36247 /* Pods-Eylet-EyletUITests.debug.xcconfig */,
+				01B2E62F71284F891315EE42 /* Pods-Eylet-EyletUITests.release.xcconfig */,
+				39C1CC4C9F25CD21A60C1C4A /* Pods-EyletTests.debug.xcconfig */,
+				565477E794FD24518B285EC1 /* Pods-EyletTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7268DD94CF21C1DE368D3A60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30B51FDDF1FA28F562792F8A /* Pods_Eylet.framework */,
+				FC5CB2E496DB65A9E4A21C44 /* Pods_Eylet_EyletUITests.framework */,
+				27D29C4810DB4DE43268D2FC /* Pods_EyletTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76C6B63423EE199100AD279B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +132,8 @@
 				76C6B65623EE199700AD279B /* EyletTests */,
 				76C6B66123EE199700AD279B /* EyletUITests */,
 				76C6B63E23EE199100AD279B /* Products */,
+				5A503CD3A7875C3F673BF812 /* Pods */,
+				7268DD94CF21C1DE368D3A60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +150,12 @@
 		76C6B63F23EE199100AD279B /* Eylet */ = {
 			isa = PBXGroup;
 			children = (
+				76C6B67023EF388200AD279B /* Utils */,
+				76C6B67323EF38A700AD279B /* Model */,
+				76C6B67823EF38FD00AD279B /* Views */,
+				76C6B67423EF38B100AD279B /* Controllers */,
 				76C6B64023EE199100AD279B /* AppDelegate.swift */,
 				76C6B64223EE199100AD279B /* SceneDelegate.swift */,
-				76C6B64423EE199100AD279B /* ViewController.swift */,
 				76C6B64623EE199100AD279B /* Main.storyboard */,
 				76C6B64923EE199700AD279B /* Assets.xcassets */,
 				76C6B64B23EE199700AD279B /* LaunchScreen.storyboard */,
@@ -128,6 +182,40 @@
 			path = EyletUITests;
 			sourceTree = "<group>";
 		};
+		76C6B67023EF388200AD279B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				76C6B67123EF389900AD279B /* SwipCardsDataSource.swift */,
+				76D08E50240199B800529F93 /* CommonFunctions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		76C6B67323EF38A700AD279B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76C6B67523EF38E000AD279B /* CardsDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76C6B67423EF38B100AD279B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76C6B64423EE199100AD279B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76C6B67823EF38FD00AD279B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76C6B67923EF391400AD279B /* SwipeCardView.swift */,
+				76C6B67B23EF392500AD279B /* StackContainterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C6B66723EE199700AD279B /* Build configuration list for PBXNativeTarget "Eylet" */;
 			buildPhases = (
+				9DCB1FDB46C1993C1CB6D799 /* [CP] Check Pods Manifest.lock */,
 				76C6B63923EE199100AD279B /* Sources */,
 				76C6B63A23EE199100AD279B /* Frameworks */,
 				76C6B63B23EE199100AD279B /* Resources */,
+				40D8658231329C04A5C6F992 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C6B66A23EE199700AD279B /* Build configuration list for PBXNativeTarget "EyletTests" */;
 			buildPhases = (
+				9743A2C8B564765ADFA776B5 /* [CP] Check Pods Manifest.lock */,
 				76C6B64F23EE199700AD279B /* Sources */,
 				76C6B65023EE199700AD279B /* Frameworks */,
 				76C6B65123EE199700AD279B /* Resources */,
@@ -170,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C6B66D23EE199700AD279B /* Build configuration list for PBXNativeTarget "EyletUITests" */;
 			buildPhases = (
+				FAE9E7A5473626B643C3C343 /* [CP] Check Pods Manifest.lock */,
 				76C6B65A23EE199700AD279B /* Sources */,
 				76C6B65B23EE199700AD279B /* Frameworks */,
 				76C6B65C23EE199700AD279B /* Resources */,
+				780BA3C3746D7DB4D4C5C4CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +347,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40D8658231329C04A5C6F992 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eylet/Pods-Eylet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eylet/Pods-Eylet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eylet/Pods-Eylet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		780BA3C3746D7DB4D4C5C4CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eylet-EyletUITests/Pods-Eylet-EyletUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eylet-EyletUITests/Pods-Eylet-EyletUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eylet-EyletUITests/Pods-Eylet-EyletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9743A2C8B564765ADFA776B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyletTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DCB1FDB46C1993C1CB6D799 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eylet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE9E7A5473626B643C3C343 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eylet-EyletUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76C6B63923EE199100AD279B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +457,12 @@
 			files = (
 				76C6B64523EE199100AD279B /* ViewController.swift in Sources */,
 				76C6B64123EE199100AD279B /* AppDelegate.swift in Sources */,
+				76D08E51240199B800529F93 /* CommonFunctions.swift in Sources */,
+				76C6B67C23EF392500AD279B /* StackContainterView.swift in Sources */,
 				76C6B64323EE199100AD279B /* SceneDelegate.swift in Sources */,
+				76C6B67623EF38E000AD279B /* CardsDataModel.swift in Sources */,
+				76C6B67223EF389900AD279B /* SwipCardsDataSource.swift in Sources */,
+				76C6B67A23EF391400AD279B /* SwipeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +633,7 @@
 		};
 		76C6B66823EE199700AD279B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991A49E4476EF36E6425D9C3 /* Pods-Eylet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +652,7 @@
 		};
 		76C6B66923EE199700AD279B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F859806D66F55269165AE0 /* Pods-Eylet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +671,7 @@
 		};
 		76C6B66B23EE199700AD279B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39C1CC4C9F25CD21A60C1C4A /* Pods-EyletTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +694,7 @@
 		};
 		76C6B66C23EE199700AD279B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565477E794FD24518B285EC1 /* Pods-EyletTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +717,7 @@
 		};
 		76C6B66E23EE199700AD279B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C1E201CA8E5189E0F36247 /* Pods-Eylet-EyletUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +738,7 @@
 		};
 		76C6B66F23EE199700AD279B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B2E62F71284F891315EE42 /* Pods-Eylet-EyletUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

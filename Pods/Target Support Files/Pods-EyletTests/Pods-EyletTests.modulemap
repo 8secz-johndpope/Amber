@@ -1,0 +1,6 @@
+framework module Pods_EyletTests {
+  umbrella header "Pods-EyletTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
