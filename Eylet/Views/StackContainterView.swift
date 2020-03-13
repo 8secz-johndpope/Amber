@@ -24,7 +24,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        backgroundColor = .red
+        backgroundColor = .gray
     }
     
     required init?(coder aDecoder: NSCoder) {

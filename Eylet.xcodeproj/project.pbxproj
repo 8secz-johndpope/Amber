@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1B5B4F8BEAAE764563A1FF0B /* Pods_Eylet_EyletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5CB2E496DB65A9E4A21C44 /* Pods_Eylet_EyletUITests.framework */; };
 		1CBACA9D40348535C815D9EF /* Pods_EyletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D29C4810DB4DE43268D2FC /* Pods_EyletTests.framework */; };
 		562FD319B2A7DF8C6B1BB4C8 /* Pods_Eylet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B51FDDF1FA28F562792F8A /* Pods_Eylet.framework */; };
+		76C3DE33241C1220001F24C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3DE32241C1220001F24C9 /* ProfileViewController.swift */; };
+		76C3DE35241C1675001F24C9 /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3DE34241C1675001F24C9 /* LikedViewController.swift */; };
 		76C6B64123EE199100AD279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64023EE199100AD279B /* AppDelegate.swift */; };
 		76C6B64323EE199100AD279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64223EE199100AD279B /* SceneDelegate.swift */; };
 		76C6B64523EE199100AD279B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6B64423EE199100AD279B /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		36F859806D66F55269165AE0 /* Pods-Eylet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eylet.release.xcconfig"; path = "Target Support Files/Pods-Eylet/Pods-Eylet.release.xcconfig"; sourceTree = "<group>"; };
 		39C1CC4C9F25CD21A60C1C4A /* Pods-EyletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyletTests.debug.xcconfig"; path = "Target Support Files/Pods-EyletTests/Pods-EyletTests.debug.xcconfig"; sourceTree = "<group>"; };
 		565477E794FD24518B285EC1 /* Pods-EyletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyletTests.release.xcconfig"; path = "Target Support Files/Pods-EyletTests/Pods-EyletTests.release.xcconfig"; sourceTree = "<group>"; };
+		76C3DE32241C1220001F24C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		76C3DE34241C1675001F24C9 /* LikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewController.swift; sourceTree = "<group>"; };
 		76C6B63D23EE199100AD279B /* Eylet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eylet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C6B64023EE199100AD279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C6B64223EE199100AD279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 				39C1CC4C9F25CD21A60C1C4A /* Pods-EyletTests.debug.xcconfig */,
 				565477E794FD24518B285EC1 /* Pods-EyletTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				76C6B64423EE199100AD279B /* ViewController.swift */,
+				76C3DE32241C1220001F24C9 /* ProfileViewController.swift */,
+				76C3DE34241C1675001F24C9 /* LikedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -459,8 +464,10 @@
 				76C6B64123EE199100AD279B /* AppDelegate.swift in Sources */,
 				76D08E51240199B800529F93 /* CommonFunctions.swift in Sources */,
 				76C6B67C23EF392500AD279B /* StackContainterView.swift in Sources */,
+				76C3DE35241C1675001F24C9 /* LikedViewController.swift in Sources */,
 				76C6B64323EE199100AD279B /* SceneDelegate.swift in Sources */,
 				76C6B67623EF38E000AD279B /* CardsDataModel.swift in Sources */,
+				76C3DE33241C1220001F24C9 /* ProfileViewController.swift in Sources */,
 				76C6B67223EF389900AD279B /* SwipCardsDataSource.swift in Sources */,
 				76C6B67A23EF391400AD279B /* SwipeCardView.swift in Sources */,
 			);

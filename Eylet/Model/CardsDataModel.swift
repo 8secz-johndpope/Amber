@@ -15,16 +15,13 @@ class CardsDataModel {
     var price: Int
     var isMale: Bool
     var brand: String
-    var mall: String
     
     
-    init(photoLink: String, name: String, price: Int, isMale: Bool, brand: String, mall: String) {
+    init(photoLink: String, name: String, price: Int, isMale: Bool, brand: String) {
         self.photoLink = photoLink
         self.name = name
         self.price = price
         self.isMale = isMale
         self.brand = brand
-        self.mall = mall
     }
-    
 }
