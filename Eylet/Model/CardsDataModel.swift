@@ -14,13 +14,15 @@ class CardsDataModel {
     var goodsName: String
     var price: String
     var brandName: String
+    var link: String
     
     
-    init(image: String, goodsName: String, price: String, brandName: String) {
+    init(image: String, goodsName: String, price: String, brandName: String, link: String) {
         self.image = image
         self.goodsName = goodsName
         self.price = price
         self.brandName = brandName
+        self.link = link
     }
 }
 

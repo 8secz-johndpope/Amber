@@ -47,7 +47,8 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
      func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-       
+        guard let url = URL(string: listOfLikedItems[indexPath.row].link) else { return }
+        UIApplication.shared.open(url)
     }
   
     
