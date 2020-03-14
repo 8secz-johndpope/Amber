@@ -11,10 +11,10 @@ import UIKit
 import MobileCoreServices
 
 class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerDelegate {
-
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
- 
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -25,10 +25,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     
     @IBOutlet weak var saveButton: UIButton!
     
+    @IBOutlet weak var shadowView: UIView!
+    
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker: ImagePicker!
     
-
+    
+    
+    
     @IBOutlet weak var imageViewButton: UIButton!
     
     @IBAction func saveButton(_ sender: Any) {
@@ -39,8 +43,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     }
     
     
+    
+    
+    func dropShadow(scale: Bool = true) {
+        shadowView.layer.cornerRadius=83
+        shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 80).cgPath
+        shadowView.layer.shadowRadius = 10
+        shadowView.layer.shadowOffset = .zero
+        shadowView.layer.shadowOpacity = 0.5
+        
+    }
+    
     let defaults = UserDefaults.standard
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +62,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-
+        
         view.addGestureRecognizer(tap)
+        
         
         nameField.delegate = self
         emailField.delegate = self
@@ -78,7 +93,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         else{
             ageField.text = defaults.value(forKey: "age") as? String
         }
-
+        
         if (defaults.value(forKey: "budget") == nil){
             budgetField.placeholder = "Budget"
             budgetField.textColor = UIColor.lightGray
@@ -88,7 +103,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         }
         if (defaults.value(forKey: "profile") != nil) {
             imageView.image = getImageFromUserDefault(key: "profile")
-
+            
         }
         
         
@@ -99,19 +114,22 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         ageLabel.font = UIFont(name: "Helvetica", size: 14)
         
         budgetLabel.font = UIFont(name: "Helvetica", size: 14)
-         
+        
         saveButton = setupButtons(text: "Save") as? StyledButton
         
         imageView.layer.cornerRadius =  80
+        
+        dropShadow()
     }
     
-   
+    
+    
     
     func setupButtons(text: String) -> UIButton{
         let buttons = StyledButton(type: .custom)
         buttons.style = .gradient(startColor: .lightGray, endColor: .lightGray)
         buttons.setTitle(text, for: .normal)
-       return buttons
+        return buttons
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -122,7 +140,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     @IBAction func swipeToRight(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
-
+        
     }
     
     @objc func dismissKeyboard() {
@@ -138,14 +156,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     
     func didSelect(image: UIImage?) {
         let newImage = image?.rounded(radius: 480)
-          self.imageView.image = newImage
+        self.imageView.image = newImage
         saveImageInUserDefault(img: image!, key: "profile")
-      }
+    }
     
     func saveImageInUserDefault(img:UIImage, key:String) {
         UserDefaults.standard.set(img.pngData(), forKey: key)
     }
-
+    
     func getImageFromUserDefault(key:String) -> UIImage? {
         let imageData = UserDefaults.standard.object(forKey: key) as? Data
         var image: UIImage? = nil

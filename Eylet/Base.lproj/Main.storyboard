@@ -150,16 +150,24 @@
                                     <constraint firstAttribute="width" constant="293" id="hgd-Q1-MRU"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywt-ZO-Rnj">
+                                <rect key="frame" x="124" y="139" width="166" height="166"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="NbS-yX-ye7"/>
+                                    <constraint firstAttribute="height" constant="166" id="yIW-na-ZuH"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-TU-tl9">
-                                <rect key="frame" x="105" y="152" width="160" height="160"/>
+                                <rect key="frame" x="127" y="142" width="160" height="160"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="fMC-9n-iUW"/>
-                                    <constraint firstAttribute="width" constant="160" id="xSX-Ut-clK"/>
+                                    <constraint firstAttribute="width" constant="160" id="cqb-MY-ccl"/>
+                                    <constraint firstAttribute="height" constant="160" id="nH7-cl-kns"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-Iw-Mki">
-                                <rect key="frame" x="105" y="314" width="160" height="34"/>
+                                <rect key="frame" x="127" y="314" width="160" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="08z-7K-wdG"/>
                                     <constraint firstAttribute="width" constant="160" id="pcR-g3-pwa"/>
@@ -174,12 +182,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96999999999999997" green="0.96999999999999997" blue="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iCS-jn-GBP" firstAttribute="top" secondItem="NZT-TU-tl9" secondAttribute="bottom" constant="74" id="HXJ-zb-WNe"/>
                             <constraint firstItem="iCS-jn-GBP" firstAttribute="centerX" secondItem="Kda-OY-XQh" secondAttribute="centerX" id="Ina-4l-FHG"/>
-                            <constraint firstItem="7UI-Iw-Mki" firstAttribute="top" secondItem="NZT-TU-tl9" secondAttribute="bottom" constant="2" id="LIx-vu-F9a"/>
-                            <constraint firstItem="7UI-Iw-Mki" firstAttribute="leading" secondItem="qb3-lu-KH9" secondAttribute="leading" constant="105" id="QDQ-yb-CLu"/>
-                            <constraint firstItem="NZT-TU-tl9" firstAttribute="leading" secondItem="qb3-lu-KH9" secondAttribute="leading" constant="105" id="Rag-Ht-aWG"/>
+                            <constraint firstItem="NZT-TU-tl9" firstAttribute="centerX" secondItem="Kda-OY-XQh" secondAttribute="centerX" id="Nkd-XM-lZf"/>
+                            <constraint firstItem="iCS-jn-GBP" firstAttribute="top" secondItem="7UI-Iw-Mki" secondAttribute="bottom" constant="38" id="UNm-p0-6Yg"/>
+                            <constraint firstItem="iCS-jn-GBP" firstAttribute="top" secondItem="ywt-ZO-Rnj" secondAttribute="bottom" constant="81" id="Xul-bO-iCg"/>
+                            <constraint firstItem="7UI-Iw-Mki" firstAttribute="centerX" secondItem="Kda-OY-XQh" secondAttribute="centerX" id="dHf-dh-OvH"/>
                             <constraint firstItem="qb3-lu-KH9" firstAttribute="bottom" secondItem="iCS-jn-GBP" secondAttribute="bottom" constant="50" id="p27-Uy-N9B"/>
+                            <constraint firstItem="7UI-Iw-Mki" firstAttribute="top" secondItem="NZT-TU-tl9" secondAttribute="bottom" constant="12" id="x5f-QK-7tQ"/>
+                            <constraint firstItem="ywt-ZO-Rnj" firstAttribute="centerX" secondItem="Kda-OY-XQh" secondAttribute="centerX" id="xZb-bx-WzQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qb3-lu-KH9"/>
                     </view>
@@ -197,6 +207,7 @@
                         <outlet property="nameField" destination="wij-AW-eI3" id="Yz6-Pa-NG8"/>
                         <outlet property="nameLabel" destination="vB2-9K-NQg" id="a6t-cI-Jpa"/>
                         <outlet property="saveButton" destination="UTE-3W-9YO" id="KRk-cX-EtD"/>
+                        <outlet property="shadowView" destination="ywt-ZO-Rnj" id="97T-uG-d94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgZ-Zh-XpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
