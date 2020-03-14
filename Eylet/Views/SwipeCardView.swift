@@ -6,7 +6,7 @@ class SwipeCardView : UIView {
     var swipeView : UIView!
     var shadowView : UIView!
     var imageView: UIImageView!
-  
+    var customClass: CardsDataModel!
     var label = UILabel()
     var moreButton = UIButton()
     
@@ -23,6 +23,7 @@ class SwipeCardView : UIView {
             label.text = dataSource?.name
             guard let image = dataSource?.photoLink else { return }
             imageView.setCustomImage(image)
+            customClass = dataSource
         }
     }
     
@@ -140,8 +141,8 @@ class SwipeCardView : UIView {
         switch sender.state {
         case .ended:
             if card.center.x > 300 {
-                delegate?.swipeDidEnd(on: card)
-                print("YO")
+                delegate?.swipeDidEnd(on: card , liked: false)
+                
                 UIView.animate(withDuration: 0.2) {
                     card.center = CGPoint(x: centerOfParentContainer.x + point.x + 200, y: centerOfParentContainer.y + point.y + 75)
                     card.alpha = 0
@@ -150,7 +151,7 @@ class SwipeCardView : UIView {
                 return
             } else if card.center.x < 10 {
                 print("hey")
-                delegate?.swipeDidEnd(on: card)
+                delegate?.swipeDidEnd(on: card, liked: true)
                 UIView.animate(withDuration: 0.2) {
                     card.center = CGPoint(x: centerOfParentContainer.x + point.x - 200, y: centerOfParentContainer.y + point.y + 75)
                     card.alpha = 0

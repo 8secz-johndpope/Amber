@@ -9,7 +9,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
     var cardsToBeVisible: Int = 3
     var cardViews : [SwipeCardView] = []
     var remainingcards: Int = 0
-    
+    var customClass: [CardsDataModel?] = []
     let horizontalInset: CGFloat = 10.0
     let verticalInset: CGFloat = 10.0
     
@@ -24,7 +24,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        backgroundColor = .gray
+        backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,10 +75,12 @@ class StackContainerView: UIView, SwipeCardsDelegate {
         cardViews = []
     }
     
-    func swipeDidEnd(on view: SwipeCardView) {
+    func swipeDidEnd(on view: SwipeCardView, liked: Bool) {
         guard let datasource = dataSource else { return }
         view.removeFromSuperview()
-
+        if liked {
+            customClass.append(view.customClass)
+        }
         if remainingcards > 0 {
             let newIndex = datasource.numberOfCardsToShow() - remainingcards
             addCardView(cardView: datasource.card(at: newIndex), atIndex: 2)
