@@ -10,18 +10,26 @@ import Foundation
 
 
 class CardsDataModel {
-    var photoLink: String
-    var name: String
-    var price: Int
-    var isMale: Bool
-    var brand: String
+    var image: String
+    var goodsName: String
+    var price: String
+    var brandName: String
     
     
-    init(photoLink: String, name: String, price: Int, isMale: Bool, brand: String) {
-        self.photoLink = photoLink
-        self.name = name
+    init(image: String, goodsName: String, price: String, brandName: String) {
+        self.image = image
+        self.goodsName = goodsName
         self.price = price
-        self.isMale = isMale
-        self.brand = brand
+        self.brandName = brandName
     }
+}
+
+
+
+// MARK: - Item
+struct Item {
+    let image: String
+    let brandName: String
+    let goodsName: String
+    let price: String
 }

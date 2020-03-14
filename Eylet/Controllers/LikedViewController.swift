@@ -26,9 +26,9 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
         
            self.view.addSubview(tableView)
 
-                    
-
     }
+    
+    
     
     @IBAction func swipeToRight(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -46,6 +46,10 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
         
     }
+     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+       
+    }
+  
     
     
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var snippet: String = ""
     
     @IBOutlet weak var leftButton: UIButton!
+    
     var stackContainer : StackContainerView!
     
     override func viewDidLoad() {
@@ -22,13 +23,55 @@ class ViewController: UIViewController {
         setupStackContainer()
         view.backgroundColor = .white
         
-        arrayOfShoes.append(CardsDataModel(photoLink:"https://www.overkillshop.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/n/f/nf0a4agklkd_1.jpg", name: "hey", price: 0, isMale: true, brand: ""))
+        var snippet = ""
+        let myURLString = "https://mlhack.appspot.com/clothesJson"
+        guard let myURL = URL(string: myURLString) else {
+           // print("Error: \(myURLString) doesn't seem to be a valid URL")
+            return
+        }
+
+        do {
+            let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
+           // print("HTML : \(myHTMLString)")
+            snippet = myHTMLString
+        } catch let error {
+            print("Error: \(error)")
+        }
         
-        arrayOfShoes.append(CardsDataModel(photoLink:"https://www.overkillshop.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/n/f/nf0a4agklkd_1.jpg", name: "hey", price: 0, isMale: true, brand: ""))
+       
+        let data = snippet.data(using: .utf8)!
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String: [[String:String]]]
+            {
+                for i in 0...jsonArray["items"]!.count - 1 {
+                    let goodsName  = jsonArray["items"]?[i]["goodsName"]
+                    let brandName  = jsonArray["items"]?[i]["brandName"]
+                    let price  = (jsonArray["items"]?[i]["price"])!
+                    let image  = jsonArray["items"]?[i]["image"]
+
+                    print(image)
+                    arrayOfShoes.append(CardsDataModel(image: decodeToCyrillic(string: image!), goodsName: decodeToCyrillic(string: goodsName!), price: decodeToCyrillic(string: price), brandName: decodeToCyrillic(string: brandName!)))
+                  
+
+
+                }
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
         
-        arrayOfShoes.append(CardsDataModel(photoLink:"https://www.overkillshop.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/n/f/nf0a4agklkd_1.jpg", name: "hey", price: 0, isMale: true, brand: ""))
+
+        
         
         stackContainer.reloadData()
+    }
+    
+    func  decodeToCyrillic(string: String) -> String {
+        let decodedString = string.data(using: .isoLatin1)
+        let cyrillicNameString = String(data: decodedString!, encoding: .utf8)!
+        return cyrillicNameString
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +91,7 @@ class ViewController: UIViewController {
     @IBAction func segueToLeft(_ sender: Any) {
         performSegue(withIdentifier: "swipeToLeft", sender: nil)
     }
+    
     func setupStackContainer() {
         stackContainer = StackContainerView()
         view.addSubview(stackContainer)
@@ -60,8 +104,8 @@ class ViewController: UIViewController {
     func configureStackContainer() {
         stackContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30).isActive = true
-        stackContainer.widthAnchor.constraint(equalToConstant: 400).isActive = true
-        stackContainer.heightAnchor.constraint(equalToConstant: 600).isActive = true
+        stackContainer.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        stackContainer.heightAnchor.constraint(equalToConstant: 500).isActive = true
     }
     
     func configureNavigationBarButtonItem() {

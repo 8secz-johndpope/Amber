@@ -20,8 +20,8 @@ class SwipeCardView : UIView {
     var dataSource : CardsDataModel? {
         didSet {
             swipeView.backgroundColor = .white
-            label.text = dataSource?.name
-            guard let image = dataSource?.photoLink else { return }
+            label.text = dataSource?.goodsName
+            guard let image = dataSource?.image else { return }
             imageView.setCustomImage(image)
             customClass = dataSource
         }
@@ -141,7 +141,7 @@ class SwipeCardView : UIView {
         switch sender.state {
         case .ended:
             if card.center.x > 300 {
-                delegate?.swipeDidEnd(on: card , liked: false)
+                delegate?.swipeDidEnd(on: card , liked: true)
                 
                 UIView.animate(withDuration: 0.2) {
                     card.center = CGPoint(x: centerOfParentContainer.x + point.x + 200, y: centerOfParentContainer.y + point.y + 75)
@@ -150,8 +150,7 @@ class SwipeCardView : UIView {
                 }
                 return
             } else if card.center.x < 10 {
-                print("hey")
-                delegate?.swipeDidEnd(on: card, liked: true)
+                delegate?.swipeDidEnd(on: card, liked: false)
                 UIView.animate(withDuration: 0.2) {
                     card.center = CGPoint(x: centerOfParentContainer.x + point.x - 200, y: centerOfParentContainer.y + point.y + 75)
                     card.alpha = 0

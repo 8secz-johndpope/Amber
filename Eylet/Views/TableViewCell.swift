@@ -13,9 +13,9 @@ class TableViewCell: UITableViewCell {
     
     var product : CardsDataModel? {
         didSet {
-            guard let image = product?.photoLink else { return }
+            guard let image = product?.image else { return }
             productImage.setCustomImage(image)
-            productNameLabel.text = product?.name
+            productNameLabel.text = product?.goodsName
             if let price = product?.price {
                 productDescriptionLabel.text = String(price)
             }
@@ -40,15 +40,7 @@ class TableViewCell: UITableViewCell {
            lbl.numberOfLines = 0
            return lbl
        }()
-    var productQuantity : UILabel =  {
-           let label = UILabel()
-           label.font = UIFont.boldSystemFont(ofSize: 16)
-           label.textAlignment = .left
-           label.text = "1"
-           label.textColor = .black
-           return label
-           
-       }()
+  
     
        private let productImage : UIImageView = {
               let imgView = UIImageView()
@@ -65,21 +57,21 @@ class TableViewCell: UITableViewCell {
         
     }
     
-    override var frame: CGRect {
-           get {
-               return super.frame
-           }
-           set (newFrame) {
-               var frame = newFrame
-               let newWidth = frame.width * 0.970 // get 80% width here
-               let space = (frame.width - newWidth) / 2
-               frame.size.width = newWidth
-               frame.origin.x += space
-
-               super.frame = frame
-
-           }
-       }
+//    override var frame: CGRect {
+//           get {
+//               return super.frame
+//           }
+//           set (newFrame) {
+//               var frame = newFrame
+//               let newWidth = frame.width * 0.970 // get 80% width here
+//               let space = (frame.width - newWidth) / 2
+//               frame.size.width = newWidth
+//               frame.origin.x += space
+//
+//               super.frame = frame
+//
+//           }
+//       }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -98,7 +90,6 @@ class TableViewCell: UITableViewCell {
         addSubview(productImage)
         addSubview(productNameLabel)
         addSubview(productDescriptionLabel)
-        addSubview(productQuantity)
         
         
         productImage.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 90, height: 0, enableInsets: false)
@@ -106,7 +97,7 @@ class TableViewCell: UITableViewCell {
         productDescriptionLabel.anchor(top: productNameLabel.bottomAnchor, left: productImage.rightAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: frame.size.width / 2, height: 0, enableInsets: false)
         
         
-        let stackView = UIStackView(arrangedSubviews: [productQuantity])
+        let stackView = UIStackView(arrangedSubviews: [])
         stackView.distribution = .equalSpacing
         stackView.axis = .horizontal
         stackView.spacing = 5
