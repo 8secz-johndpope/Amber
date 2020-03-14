@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         let destVC : ProfileViewController = segue.destination as! ProfileViewController
         } else {
         let destVC : LikedViewController = segue.destination as! LikedViewController
+            destVC.listOfLikedItems = stackContainer.customClass as! [CardsDataModel]
         }
     }
 
