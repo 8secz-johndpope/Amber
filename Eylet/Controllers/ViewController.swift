@@ -59,8 +59,8 @@ class ViewController: UIViewController {
     func configureStackContainer() {
         stackContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30).isActive = true
-        stackContainer.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        stackContainer.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        stackContainer.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        stackContainer.heightAnchor.constraint(equalToConstant: 600).isActive = true
     }
     
     func configureNavigationBarButtonItem() {
