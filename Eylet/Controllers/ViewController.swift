@@ -48,12 +48,10 @@ class ViewController: UIViewController {
                     let brandName  = jsonArray["items"]?[i]["brandName"]
                     let price  = (jsonArray["items"]?[i]["price"])!
                     let image  = jsonArray["items"]?[i]["image"]
+                    let link =  jsonArray["items"]?[i]["link"]
 
-                    print(image)
-                    arrayOfShoes.append(CardsDataModel(image: decodeToCyrillic(string: image!), goodsName: decodeToCyrillic(string: goodsName!), price: decodeToCyrillic(string: price), brandName: decodeToCyrillic(string: brandName!)))
+                    arrayOfShoes.append(CardsDataModel(image: decodeToCyrillic(string: image!), goodsName: decodeToCyrillic(string: goodsName!), price: decodeToCyrillic(string: price), brandName: decodeToCyrillic(string: brandName!), link: decodeToCyrillic(string: link!)))
                   
-
-
                 }
             } else {
                 print("bad json")
