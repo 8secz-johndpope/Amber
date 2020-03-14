@@ -35,13 +35,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailField.textColor = UIColor.lightGray
-        nameField.textColor = UIColor.lightGray
-        ageField.textColor = UIColor.lightGray
-        budgetField.textColor = UIColor.lightGray
         
         if (defaults.value(forKey: "name") == nil){
         nameField.text = "Full name"
+        nameField.textColor = UIColor.lightGray
         }
         else{
             nameField.text = defaults.value(forKey: "name") as? String
@@ -49,6 +46,7 @@ class ProfileViewController: UIViewController {
         
         if (defaults.value(forKey: "email") == nil){
             emailField.text = "Email"
+            emailField.textColor = UIColor.lightGray
         }
         else{
             emailField.text = defaults.value(forKey: "email") as? String
@@ -56,13 +54,15 @@ class ProfileViewController: UIViewController {
         
         if (defaults.value(forKey: "age")==nil){
             ageField.text = "Age"
+            ageField.textColor = UIColor.lightGray
         }
         else{
             ageField.text = defaults.value(forKey: "age") as? String
         }
 
         if (defaults.value(forKey: "budget") == nil){
-        budgetField.text = "Budget"
+            budgetField.text = "Budget"
+            budgetField.textColor = UIColor.lightGray
         }
         else{
             budgetField.text = defaults.value(forKey: "budget") as? String
