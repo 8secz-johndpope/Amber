@@ -13,16 +13,18 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
   
     var tableView: UITableView = UITableView()
     let cellId = "cellId"
+    var listOfCells: [TableViewCell] = []
 
     var listOfLikedItems: [CardsDataModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        tableView.frame = CGRect(x: 10, y: 100, width: view.frame.width - 20, height: view.frame.height - 200)
+        listOfCells = []
+        tableView.frame = CGRect(x: 10, y: 100, width: view.frame.width - 20, height: view.frame.height - 100)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorColor = .clear
+        tableView.showsVerticalScrollIndicator = false
         
            self.view.addSubview(tableView)
 
@@ -40,9 +42,18 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
       }
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if listOfCells.count > indexPath.row {
+            return listOfCells[indexPath.row]
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
+        
         let currentLastItem = listOfLikedItems[indexPath.row]
         cell.product = currentLastItem
+        
+        cell.selectedBackgroundView?.layer.cornerRadius = 12
+        cell.selectedBackgroundView?.clipsToBounds = true
+        listOfCells.append(cell)
         return cell
         
     }
@@ -50,7 +61,14 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard let url = URL(string: listOfLikedItems[indexPath.row].link) else { return }
         UIApplication.shared.open(url)
     }
-  
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+                self.listOfCells.remove(at: indexPath.row)
+        self.listOfLikedItems.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
+    }
     
     
 }
