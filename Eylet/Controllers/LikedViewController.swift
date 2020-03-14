@@ -25,8 +25,10 @@ class LikedViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.separatorColor = .clear
         tableView.showsVerticalScrollIndicator = false
-        
+//        tableView.backgroundColor =  UIColor(red: 236.0/255.0, green: 232.0/255.0, blue: 235.0/255.0, alpha: 1.0)
+        tableView.backgroundColor = #colorLiteral(red: 0.9408032298, green: 0.9283742309, blue: 0.9373263717, alpha: 1)
            self.view.addSubview(tableView)
+        
 
     }
     

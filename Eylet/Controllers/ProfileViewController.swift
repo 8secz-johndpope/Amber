@@ -31,6 +31,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     var imagePicker: ImagePicker!
     
     
+    @IBOutlet weak var shadowInfoView: UIView!
     
     
     @IBOutlet weak var imageViewButton: UIButton!
@@ -45,12 +46,20 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     
     
     
-    func dropShadow(scale: Bool = true) {
-        shadowView.layer.cornerRadius=83
+    func dropShadowProfilePhoto(scale: Bool = true) {
+        shadowView.layer.cornerRadius = 83
         shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 80).cgPath
         shadowView.layer.shadowRadius = 10
         shadowView.layer.shadowOffset = .zero
         shadowView.layer.shadowOpacity = 0.5
+        
+    }
+    
+    func dropShadowProfileInfo(scale: Bool = true) {
+        shadowInfoView.layer.shadowPath = UIBezierPath(roundedRect: shadowInfoView.bounds, cornerRadius: 15).cgPath
+        shadowInfoView.layer.shadowRadius = 10
+        shadowInfoView.layer.shadowOffset = .zero
+        shadowInfoView.layer.shadowOpacity = 0.2
         
     }
     
@@ -72,6 +81,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         budgetField.delegate = self
         
         backgroundView.layer.cornerRadius = 15
+        shadowInfoView.layer.cornerRadius = 15
+        
         if defaults.value(forKey: "name") == nil {
             nameField.placeholder = "Full name"
             nameField.textColor = UIColor.lightGray
@@ -119,7 +130,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
         
         imageView.layer.cornerRadius =  80
         
-        dropShadow()
+        dropShadowProfilePhoto()
+        dropShadowProfileInfo()
+        
     }
     
     
