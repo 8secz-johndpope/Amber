@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,9 +12,10 @@
             <objects>
                 <viewController id="2cS-6f-fZz" customClass="ProfileViewController" customModule="Eylet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kda-OY-XQh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-fe-kyU">
                                 <rect key="frame" x="0.0" y="21" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -47,17 +48,28 @@
                         <viewLayoutGuide key="safeArea" id="qb3-lu-KH9"/>
                     </view>
                     <navigationItem key="navigationItem" id="xn2-le-2dp"/>
+                    <connections>
+                        <outlet property="ageField" destination="aZ8-UM-jlO" id="v2B-DD-Fcy"/>
+                        <outlet property="ageLabel" destination="uhi-86-n9b" id="WfZ-r1-kbL"/>
+                        <outlet property="budgetField" destination="uUd-R8-omG" id="erf-Ym-Wu6"/>
+                        <outlet property="budgetLabel" destination="oLc-jf-zJ6" id="8aI-pc-5HS"/>
+                        <outlet property="emailField" destination="O29-G2-ZPH" id="b0A-bx-gP8"/>
+                        <outlet property="emailLabel" destination="2Z4-HU-bqa" id="h84-kk-sFK"/>
+                        <outlet property="nameField" destination="tcV-7M-ftl" id="42B-gk-RLB"/>
+                        <outlet property="nameLabel" destination="VYB-L8-gIp" id="oPq-az-hWV"/>
+                        <outlet property="profileLabel" destination="hDr-vo-jH0" id="TGA-xh-1wl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgZ-Zh-XpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719" y="822"/>
+            <point key="canvasLocation" x="-720.28985507246387" y="821.65178571428567"/>
         </scene>
         <!--Liked View Controller-->
         <scene sceneID="hDB-bc-0J5">
             <objects>
                 <viewController id="gsO-Hg-xiC" customClass="LikedViewController" customModule="Eylet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pK8-34-Lec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sdd-uN-REM">
@@ -101,7 +113,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eylet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-Ag-juk">

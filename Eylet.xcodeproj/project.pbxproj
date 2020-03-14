@@ -648,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CMGKJSD9NW;
+				DEVELOPMENT_TEAM = T4D8B53QZL;
 				INFOPLIST_FILE = Eylet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CMGKJSD9NW;
+				DEVELOPMENT_TEAM = T4D8B53QZL;
 				INFOPLIST_FILE = Eylet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
