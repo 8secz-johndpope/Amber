@@ -33,7 +33,7 @@ class StyledButton: UIButton {
         case solid(color: UIColor, textColor: UIColor)
         
         static var defaultGradient: Style {
-            return .gradient(startColor: .lightGray, endColor: .lightGray)
+            return .gradient(startColor: .mango, endColor: .highlightCoral)
         }
         
         static var defaultBorder: Style {
@@ -86,7 +86,7 @@ class StyledButton: UIButton {
         invalidateIntrinsicContentSize()
     }
     
-    var highlightedGradient: [UIColor] = [.lightGray, .gray]
+    var highlightedGradient: [UIColor] = [.mango, .highlightCoral]
     var borderImageColor = UIColor.coral
     
     private weak var gradientLayer: CAGradientLayer?

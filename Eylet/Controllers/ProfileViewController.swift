@@ -140,7 +140,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, ImagePickerD
     
     func setupButtons(text: String) -> UIButton{
         let buttons = StyledButton(type: .custom)
-        buttons.style = .gradient(startColor: .lightGray, endColor: .lightGray)
+        buttons.style = .gradient(startColor: .mango, endColor: .highlightCoral)
         buttons.setTitle(text, for: .normal)
         return buttons
     }
