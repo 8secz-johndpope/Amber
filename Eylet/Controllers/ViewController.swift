@@ -21,8 +21,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStackContainer()
-        view.backgroundColor = .white
-        
         var snippet = ""
         let myURLString = "https://mlhack.appspot.com/clothesJson"
         guard let myURL = URL(string: myURLString) else {

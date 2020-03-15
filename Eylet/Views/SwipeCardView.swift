@@ -9,7 +9,8 @@ class SwipeCardView : UIView {
     var customClass: CardsDataModel!
     var label = UILabel()
     var moreButton = UIButton()
-    
+    var labelBrand = UILabel()
+    var labelPrice = UILabel()
     var delegate : SwipeCardsDelegate?
 
     var divisor : CGFloat = 0
@@ -21,6 +22,8 @@ class SwipeCardView : UIView {
         didSet {
             swipeView.backgroundColor = .white
             label.text = dataSource?.goodsName
+            labelBrand.text = dataSource?.brandName
+            labelPrice.text = dataSource!.price + "‎₽"
             guard let image = dataSource?.image else { return }
             imageView.setCustomImage(image)
             customClass = dataSource
@@ -33,9 +36,11 @@ class SwipeCardView : UIView {
         super.init(frame: .zero)
         configureShadowView()
         configureSwipeView()
-        configureLabelView()
         configureImageView()
+        configureLabelView()
+        configurePriceView()
         configureButton()
+        configureBrandView()
         addPanGestureOnCards()
         configureTapGesture()
     }
@@ -81,7 +86,7 @@ class SwipeCardView : UIView {
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.leftAnchor.constraint(equalTo: swipeView.leftAnchor).isActive = true
         label.rightAnchor.constraint(equalTo: swipeView.rightAnchor).isActive = true
@@ -89,17 +94,45 @@ class SwipeCardView : UIView {
         label.heightAnchor.constraint(equalToConstant: 85).isActive = true
         
     }
+    func configurePriceView() {
+          swipeView.addSubview(labelPrice)
+           labelPrice.backgroundColor = .white
+           labelPrice.textColor = .black
+           labelPrice.textAlignment = .center
+           labelPrice.numberOfLines = 0
+           labelPrice.font = UIFont.systemFont(ofSize: 18)
+           labelPrice.translatesAutoresizingMaskIntoConstraints = false
+            labelPrice.leftAnchor.constraint(equalTo: swipeView.leftAnchor, constant: 25).isActive = true
+           labelPrice.topAnchor.constraint(equalTo: label.topAnchor, constant: -10).isActive = true
+           labelPrice.heightAnchor.constraint(equalToConstant: 25).isActive = true
+           labelPrice.widthAnchor.constraint(equalToConstant: 400).isActive = true
+           
+           
+       }
+    func configureBrandView() {
+           swipeView.addSubview(labelBrand)
+           labelBrand.backgroundColor = .white
+           labelBrand.textColor = .black
+           labelBrand.textAlignment = .center
+           labelBrand.numberOfLines = 0
+           labelBrand.font = UIFont.systemFont(ofSize: 18)
+           labelBrand.translatesAutoresizingMaskIntoConstraints = false
+            labelBrand.leftAnchor.constraint(equalTo: swipeView.leftAnchor, constant: 25).isActive = true
+           labelBrand.topAnchor.constraint(equalTo: label.topAnchor, constant: -10).isActive = true
+           labelBrand.heightAnchor.constraint(equalToConstant: 25).isActive = true
+           labelBrand.widthAnchor.constraint(equalToConstant: 125).isActive = true
+           
+       }
     
     func configureImageView() {
         imageView = UIImageView()
         swipeView.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-
         imageView.centerXAnchor.constraint(equalTo: swipeView.centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: swipeView.centerYAnchor, constant: -30).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 600).isActive = true
     }
     
     func configureButton() {
